@@ -1,0 +1,11 @@
+# pod.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: list-deps
+  namespace: sk-admin
+spec:
+  containers:
+  - name: list-dep-contt
+    image: saisk026/operator-testing:list-deps-1.9
+  serviceAccountName: deployment-reader
